@@ -2,7 +2,11 @@ const defaultConfig = require('tailwindcss/defaultConfig');
 const { sans } = defaultConfig.theme.fontFamily;
 
 module.exports = {
-  purge: [],
+  purge: [
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/styles/tailwind.css',
+  ],
   darkMode: false,
   theme: {
     extend: {
