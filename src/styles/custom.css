@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 400;
+  font-display: optional;
+  src: url(/fonts/Barlow-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 500;
+  font-display: optional;
+  src: url(/fonts/Barlow-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 600;
+  font-display: optional;
+  src: url(/fonts/Barlow-SemiBold.woff2) format('woff2');
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.debug {
+  border: 2px solid red !important;
+}
