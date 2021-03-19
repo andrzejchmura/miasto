@@ -9,8 +9,8 @@ type HeadProps = {
 
 const Head = ({
   title = 'Miasto',
-  description = 'Miasto Gdynia.',
-  image,
+  description = 'Open-source, interactive city explorer.',
+  image = '/hero.png',
   children,
 }: HeadProps) => {
   return (
