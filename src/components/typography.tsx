@@ -45,7 +45,7 @@ export const Li = ({ children, className }: TypographyProps) => (
 export const Aside = ({ children, className }: TypographyProps) => (
   <aside
     className={cx(
-      'my-2 p-3',
+      'my-4 p-3',
       'bg-purple-50 text-sm rounded-md text-purple-800',
       className
     )}

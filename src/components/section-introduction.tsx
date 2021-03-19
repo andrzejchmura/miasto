@@ -20,11 +20,31 @@ const SectionIntroduction = ({ onView }: SectionProps) => {
         </Li>
         <Li>Explore the city through different metrics.</Li>
       </ul>
-      <P>This is an ongoing project.</P>
       <Aside>
         Gdynia was chosen as the first city available in Miasto. More cities are
         coming soon.
       </Aside>
+      <P>
+        This is an open-source project by{' '}
+        <a
+          href="https://twitter.com/andrzejchmura"
+          className="text-purple-600"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @andrzejchmura
+        </a>
+        . The code is available on{' '}
+        <a
+          href="https://github.com/andrzejchmura/miasto"
+          className="text-purple-600"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        .
+      </P>
     </Section>
   );
 };
