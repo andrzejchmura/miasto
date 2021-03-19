@@ -38,6 +38,13 @@ const Head = ({
       <meta name="apple-mobile-web-app-title" content="Miasto" />
       <meta name="author" content="Andrzej Chmura" />
 
+      <script
+        async
+        defer
+        data-domain="mias.to"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
+
       <link
         rel="preload"
         href="/fonts/Barlow-Regular.woff2"
