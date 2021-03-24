@@ -1,5 +1,6 @@
 // @refresh reset
 import { memo, useRef, useEffect } from 'react';
+import { useWindowSize } from 'hooks/use-window-size';
 import { MapMouseEvent, MapTouchEvent } from 'mapbox-gl';
 import Explorer from 'lib/explorer';
 import { Vec2 } from 'lib/math';
@@ -20,6 +21,7 @@ type MapProps = {
 };
 
 const Map = ({ radius, layer, toast, setStats, setToast }: MapProps) => {
+  const windowSize = useWindowSize();
   const container = useRef<HTMLDivElement>(null);
   const explorer = useRef<Explorer>();
   const vectors = useRef<Vectors>({
@@ -56,6 +58,10 @@ const Map = ({ radius, layer, toast, setStats, setToast }: MapProps) => {
   }, []);
 
   useEffect(() => {
+    explorer.current?.map.resize();
+  }, [windowSize]);
+
+  useEffect(() => {
     explorer.current?.map.on('zoomend', onZoom);
 
     return () => {
@@ -65,9 +71,11 @@ const Map = ({ radius, layer, toast, setStats, setToast }: MapProps) => {
 
   useEffect(() => {
     explorer.current?.map.on('mousedown', 'circle', onDragStart);
+    explorer.current?.map.on('touchstart', 'circle', onDragStart);
 
     return () => {
       explorer.current?.map.off('mousedown', 'circle', onDragStart);
+      explorer.current?.map.off('touchstart', 'circle', onDragStart);
     };
   }, [radius]);
 
@@ -95,8 +103,10 @@ const Map = ({ radius, layer, toast, setStats, setToast }: MapProps) => {
       .toPoint();
 
     explorer.current?.map.on('mousemove', onDragMove);
+    explorer.current?.map.on('touchmove', onDragMove);
     explorer.current?.map.once('mouseup', onDragEnd);
     explorer.current?.map.once('mouseout', onDragEnd);
+    explorer.current?.map.once('touchend', onDragEnd);
   }
 
   function onDragMove(e: MapPointerEvent) {

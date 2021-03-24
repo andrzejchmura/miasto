@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         sans: ['Barlow', ...sans],
       },
+      minHeight: {
+        '3/4': '75%',
+      },
     },
   },
   variants: {

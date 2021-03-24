@@ -19,14 +19,6 @@
   src: url(/fonts/Barlow-SemiBold.woff2) format('woff2');
 }
 
-@media (min-width: 768px) {
-  .grid-layout {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto 1fr;
-  }
-}
-
 .debug {
   border: 2px solid red !important;
 }

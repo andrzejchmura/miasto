@@ -12,14 +12,14 @@ const MAX = 800;
 
 const Range = ({ radius, setRadius }: RangeProps) => {
   return (
-    <div className="absolute top-8 w-full flex justify-center pointer-events-none z-50">
-      <div className="w-96 pointer-events-auto">
+    <div className="absolute top-4 lg:top-8 w-full flex justify-center pointer-events-none z-50">
+      <div className="w-96 px-4">
         <div className="mb-1">
           <H4>
             Walking distance: <span className="font-semibold">{radius}</span> m
           </H4>
         </div>
-        <div className="shadow-sm bg-gray-50 p-4 rounded-md">
+        <div className="shadow-sm bg-gray-50 p-4 rounded-md pointer-events-auto">
           <ReactRange
             min={MIN}
             max={MAX}
