@@ -26,7 +26,7 @@ const HomePage = () => {
             </a>
             .
           </h2>
-          <div className="relative">
+          <div className="relative max-w-6xl mx-auto">
             <Image
               src="/hero.png"
               width={1380}
@@ -39,7 +39,7 @@ const HomePage = () => {
                 <a
                   className={cx(
                     'bg-gray-900 px-6 py-3 rounded-full outline-none',
-                    'md:mt-40 lg:mt-60 lg:px-8 lg:py-4',
+                    'md:mt-40 lg:mt-48 lg:px-8 lg:py-4',
                     'transition-shadow shadow-lg hover:shadow-xl',
                     'text-gray-50 text-xl font-semibold lg:text-2xl',
                     'focus:ring-4 ring-purple-400'

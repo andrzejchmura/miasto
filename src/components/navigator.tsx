@@ -17,7 +17,7 @@ const Navigator = ({ stats, toast, ...sectionProps }: NavigatorProps) => {
   return (
     <div
       className={cx(
-        'px-8 py-4 w-full',
+        'px-8 pt-4 pb-8 w-full',
         'md:max-w-sm md:flex-none md:overflow-y-scroll'
       )}
     >

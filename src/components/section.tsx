@@ -11,7 +11,7 @@ export type SectionProps = {
 };
 const Section = ({ name, layer, setLayer, children }: SectionProps) => {
   const [ref, inView, entity] = useInView({
-    threshold: [0.5, 1],
+    threshold: [0.7, 1],
   });
 
   useEffect(() => {
