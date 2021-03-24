@@ -3,7 +3,6 @@ import Range from 'components/range';
 import Map from 'components/map';
 import Toaster from 'components/toaster';
 import { useExplorer } from 'hooks/use-explorer';
-import cx from 'classnames';
 
 const Region = () => {
   const { state, setToast, setRadius, setLayer, setStats } = useExplorer();
@@ -17,12 +16,7 @@ const Region = () => {
         setLayer={setLayer}
         toast={toast}
       />
-      <div
-        className={cx(
-          'relative w-full min-h-3/4 order-first',
-          'md:flex-1 md:order-last'
-        )}
-      >
+      <div className="relative w-full order-first md:flex-1 md:order-last">
         <Toaster toast={toast} />
         <Range radius={radius} setRadius={setRadius} />
         <Map

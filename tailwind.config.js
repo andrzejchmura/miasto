@@ -14,7 +14,7 @@ module.exports = {
         sans: ['Barlow', ...sans],
       },
       minHeight: {
-        '3/4': '75%',
+        '70vh': '70vh',
       },
     },
   },

@@ -126,7 +126,7 @@ const Map = ({ radius, layer, toast, setStats, setToast }: MapProps) => {
     explorer.current?.map.off('touchmove', onDragMove);
   }
 
-  return <div className="w-full h-full" ref={container}></div>;
+  return <div className="w-full min-h-70vh h-full" ref={container}></div>;
 };
 
 export default memo(Map);
