@@ -1,14 +1,14 @@
-import Section, { SectionProps } from 'components/section';
 import List from 'components/list';
 import { H4, P } from 'components/typography';
 import { codeGroups } from 'lib/data';
 import { mergeWith } from 'lib/helpers';
+import { StatsFragment } from 'types';
 
-const SectionCodes = ({ stats, onView }: SectionProps) => {
+const SectionCodes = ({ stats }: { stats?: StatsFragment }) => {
   const formattedStats = mergeWith(codeGroups, stats || {});
 
   return (
-    <Section onView={onView}>
+    <>
       <H4>Functions</H4>
       <P>
         One of the key components of a convenient city is a diverse function mix
@@ -16,7 +16,7 @@ const SectionCodes = ({ stats, onView }: SectionProps) => {
         destinations within a neighborhood.
       </P>
       <List width={300} stats={formattedStats} />
-    </Section>
+    </>
   );
 };
 

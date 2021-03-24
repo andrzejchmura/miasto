@@ -1,16 +1,16 @@
-import Section, { SectionProps } from 'components/section';
 import Overview from 'components/overview';
 import { DataPoint, DataGroup } from 'components/statistic';
 import BarSplit from 'components/bar-split';
 import { H4, P } from 'components/typography';
 import { figureGroups } from 'lib/data';
 import { mergeWith } from 'lib/helpers';
+import { StatsFragment } from 'types';
 
-const SectionFigure = ({ stats, onView }: SectionProps) => {
+const SectionFigure = ({ stats }: { stats?: StatsFragment }) => {
   const formattedStats = mergeWith(figureGroups, stats || {});
 
   return (
-    <Section onView={onView}>
+    <>
       <H4>Overview</H4>
       <Overview />
       <H4>Figure</H4>
@@ -23,7 +23,7 @@ const SectionFigure = ({ stats, onView }: SectionProps) => {
         <DataPoint label="Footprint" value={stats?.SOLID} unit="m²"></DataPoint>
       </DataGroup>
       <BarSplit width={300} stats={formattedStats} />
-    </Section>
+    </>
   );
 };
 

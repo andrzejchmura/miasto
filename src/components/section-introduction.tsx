@@ -1,9 +1,8 @@
-import Section, { SectionProps } from 'components/section';
 import { H4, P, Li, Aside } from 'components/typography';
 
-const SectionIntroduction = ({ onView }: SectionProps) => {
+const SectionIntroduction = () => {
   return (
-    <Section onView={onView}>
+    <>
       <H4>Introduction</H4>
       <P className="text-xl">
         <span className="font-semibold">Miasto</span> is an interactive city
@@ -45,7 +44,7 @@ const SectionIntroduction = ({ onView }: SectionProps) => {
         </a>
         .
       </P>
-    </Section>
+    </>
   );
 };
 
