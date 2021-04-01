@@ -2,6 +2,7 @@ import Navigator from 'components/navigator';
 import Range from 'components/range';
 import Map from 'components/map';
 import Toaster from 'components/toaster';
+import MobileBanner from 'components/mobile-banner';
 import { useExplorer } from 'hooks/use-explorer';
 
 const Region = () => {
@@ -10,6 +11,7 @@ const Region = () => {
 
   return (
     <main className="h-screen flex flex-col md:flex-row">
+      <MobileBanner />
       <Navigator
         stats={stats}
         layer={layer}
