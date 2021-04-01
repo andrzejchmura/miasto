@@ -1,7 +1,12 @@
+import Page from 'components/page';
 import Error from 'components/error';
 
 const NotFoundPage = () => {
-  return <Error status={404} />;
+  return (
+    <Page>
+      <Error />
+    </Page>
+  );
 };
 
 export default NotFoundPage;

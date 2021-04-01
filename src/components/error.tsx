@@ -1,22 +1,31 @@
-import Page from 'components/page';
+import Link from 'next/link';
+import cx from 'classnames';
 
-type ErrorProps = {
-  status: number;
-};
-
-const Error = ({ status }: ErrorProps) => {
-  const renderMessage = (status: number) => {
-    if (status === 404) {
-      return <h1>This page cannot be found.</h1>;
-    }
-
-    return <h1>An error occured</h1>;
-  };
-
+const Error = () => {
   return (
-    <Page>
-      <section>{renderMessage(status)}</section>
-    </Page>
+    <main className="container mx-auto text-center py-4 px-4 mt-16">
+      <h3 className="uppercase text-gray-300 font-bold text-sm">
+        404: Whooops
+      </h3>
+      <h1 className="font-semibold text-3xl leading-tight mb-2 text-gray-900">
+        The page you're looking for is beyond our reach.
+      </h1>
+      <div className="max-w-6xl mx-auto flex justify-center items-center mt-16">
+        <Link href="/gdynia">
+          <a
+            className={cx(
+              'bg-gray-900 rounded-full outline-none',
+              'px-6 py-3 lg:px-8 lg:py-4',
+              'transition-shadow shadow-lg hover:shadow-xl',
+              'text-gray-50 text-xl font-semibold lg:text-2xl',
+              'focus:ring-4 ring-purple-400'
+            )}
+          >
+            Back to explorer
+          </a>
+        </Link>
+      </div>
+    </main>
   );
 };
 
