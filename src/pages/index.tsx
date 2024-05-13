@@ -32,21 +32,21 @@ const HomePage = () => {
               width={1380}
               height={884}
               className="opacity-80"
+              alt="preview of the main explorer"
             />
             <div className="absolute inset-0 bg-gradient-to-t  from-white"></div>
             <div className="absolute inset-0 z-10 flex justify-center items-center">
-              <Link href="/gdynia">
-                <a
-                  className={cx(
-                    'bg-gray-900 px-6 py-3 rounded-full outline-none',
-                    'md:mt-40 lg:mt-48 lg:px-8 lg:py-4',
-                    'transition-shadow shadow-lg hover:shadow-xl',
-                    'text-gray-50 text-xl font-semibold lg:text-2xl',
-                    'focus:ring-4 ring-purple-400'
-                  )}
-                >
-                  Explore
-                </a>
+              <Link
+                href="/gdynia"
+                className={cx(
+                  'bg-gray-900 px-6 py-3 rounded-full outline-none',
+                  'md:mt-40 lg:mt-48 lg:px-8 lg:py-4',
+                  'transition-shadow shadow-lg hover:shadow-xl',
+                  'text-gray-50 text-xl font-semibold lg:text-2xl',
+                  'focus:ring-4 ring-purple-400'
+                )}
+              >
+                Explore
               </Link>
             </div>
           </div>

@@ -11,18 +11,17 @@ const Error = () => {
         The page you're looking for is beyond our reach.
       </h1>
       <div className="max-w-6xl mx-auto flex justify-center items-center mt-16">
-        <Link href="/gdynia">
-          <a
-            className={cx(
-              'bg-gray-900 rounded-full outline-none',
-              'px-6 py-3 lg:px-8 lg:py-4',
-              'transition-shadow shadow-lg hover:shadow-xl',
-              'text-gray-50 text-xl font-semibold lg:text-2xl',
-              'focus:ring-4 ring-purple-400'
-            )}
-          >
-            Back to explorer
-          </a>
+        <Link
+          href="/gdynia"
+          className={cx(
+            'bg-gray-900 rounded-full outline-none',
+            'px-6 py-3 lg:px-8 lg:py-4',
+            'transition-shadow shadow-lg hover:shadow-xl',
+            'text-gray-50 text-xl font-semibold lg:text-2xl',
+            'focus:ring-4 ring-purple-400'
+          )}
+        >
+          Back to explorer
         </Link>
       </div>
     </main>
